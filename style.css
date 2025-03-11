@@ -113,6 +113,22 @@ img {
   margin-right: auto;
 }
 
+.btn.btn-outline {
+  width: 84px;
+  height: 84px;
+  border: 1px solid #237249;
+  border-radius: 29px;
+  display: flex;
+  justify-content: center;
+}
+.btn.btn-outline svg {
+  width: 12px;
+}
+
+.svg-sprite {
+  height: 0;
+}
+
 ::selection {
   color: #121517;
   background-color: #237249;
@@ -184,10 +200,99 @@ header .btn-burger {
   opacity: 0;
 }
 
-footer {
-  height: 100px;
-  background-color: #0B0C0D;
+.footer {
+  padding: 36px 0;
   margin-top: auto;
+}
+.footer-row, .footer-contacts {
+  display: flex;
+}
+.footer-row {
+  margin-bottom: 84px;
+  align-items: flex-start;
+}
+.footer-contacts {
+  align-items: center;
+}
+.footer_logo {
+  position: relative;
+}
+.footer_logo:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 371px;
+  height: 260px;
+  background: url(./assets/img/decoration__footer-logo.png) center/contain no-repeat;
+  z-index: -1;
+}
+.footer-nav {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  max-width: 761px;
+  width: 100%;
+}
+.footer-nav__column {
+  padding: 0 12px;
+}
+.footer-nav__title {
+  font-size: 20px;
+  color: #BBB3B3;
+  margin-bottom: 8px;
+  font-weight: 400;
+}
+.footer-nav__link {
+  color: #5b595a;
+  font-size: 20px;
+  margin-bottom: 8px;
+  text-decoration: none;
+}
+.footer-nav__item {
+  margin-bottom: 8px;
+}
+.footer-nav__item:last-child {
+  margin-bottom: 0;
+}
+.footer-social {
+  margin-left: auto;
+}
+.footer-social__item {
+  position: relative;
+  display: inline-block;
+}
+.footer-social__item::before {
+  content: "";
+  position: absolute;
+  left: -73px;
+  top: -35px;
+  width: 168px;
+  height: 153px;
+  background-image: url(./assets/img/decoration__footer-instagram.png);
+  z-index: -1;
+}
+.footer-phones {
+  display: flex;
+  gap: 24px;
+}
+.footer-phones__item {
+  color: #35C66B;
+  font-size: 26px;
+  font-weight: 600;
+  text-decoration: none;
+  position: relative;
+}
+.footer-phones__item::before {
+  content: "";
+  position: absolute;
+  left: px;
+  top: px;
+  width: px;
+  height: px;
+  background-image: url(./assets/img/decoration__footer-phone.png);
+  z-index: -1;
 }
 
 @media (min-width: 1025px) {
