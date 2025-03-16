@@ -106,6 +106,10 @@ img {
   height: auto;
 }
 
+a:hover {
+  color: #35C66B;
+}
+
 .container {
   max-width: 1274px;
   padding: 0 12px;
@@ -160,9 +164,6 @@ header .btn-burger {
   color: #D9D9D9;
   text-decoration: none;
 }
-.menu_link:hover {
-  color: #35C66B;
-}
 
 .btn-burger {
   border: none;
@@ -201,14 +202,19 @@ header .btn-burger {
 }
 
 .footer {
-  padding: 36px 0;
+  padding: 43px 0;
   margin-top: auto;
+  overflow: hidden;
+}
+.footer .container {
+  z-index: 1;
+  position: relative;
 }
 .footer-row, .footer-contacts {
   display: flex;
 }
 .footer-row {
-  margin-bottom: 84px;
+  margin-bottom: 110px;
   align-items: flex-start;
 }
 .footer-contacts {
@@ -223,17 +229,20 @@ header .btn-burger {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: -1;
+  background: center/contain no-repeat;
   width: 371px;
   height: 260px;
-  background: url(./assets/img/decoration__footer-logo.png) center/contain no-repeat;
-  z-index: -1;
+  background-image: url(./assets/img/decoration__footer-light-lg.png);
 }
 .footer-nav {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  max-width: 761px;
+  max-width: 783px;
+  padding: 4px 0;
   width: 100%;
+  position: relative;
 }
 .footer-nav__column {
   padding: 0 12px;
@@ -241,7 +250,7 @@ header .btn-burger {
 .footer-nav__title {
   font-size: 20px;
   color: #BBB3B3;
-  margin-bottom: 8px;
+  margin-bottom: 13px;
   font-weight: 400;
 }
 .footer-nav__link {
@@ -251,10 +260,22 @@ header .btn-burger {
   text-decoration: none;
 }
 .footer-nav__item {
-  margin-bottom: 8px;
+  margin-bottom: 11px;
 }
 .footer-nav__item:last-child {
   margin-bottom: 0;
+}
+.footer-nav:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  background: center/contain no-repeat;
+  width: 1250px;
+  height: 906px;
+  background-image: url(./assets/img/decoration__footer-light-lg.png);
 }
 .footer-social {
   margin-left: auto;
@@ -262,16 +283,18 @@ header .btn-burger {
 .footer-social__item {
   position: relative;
   display: inline-block;
+  height: 47px;
+  width: 47px;
 }
-.footer-social__item::before {
+.footer-social__item:before {
   content: "";
   position: absolute;
-  left: -73px;
-  top: -35px;
+  left: -86px;
+  top: -30px;
+  z-index: -1;
   width: 168px;
   height: 153px;
-  background-image: url(./assets/img/decoration__footer-instagram.png);
-  z-index: -1;
+  background-image: url(./assets/img/decoration__footer-light-sm.png);
 }
 .footer-phones {
   display: flex;
@@ -284,20 +307,27 @@ header .btn-burger {
   text-decoration: none;
   position: relative;
 }
-.footer-phones__item::before {
+.footer-phones__item:before {
   content: "";
   position: absolute;
-  left: px;
-  top: px;
-  width: px;
-  height: px;
-  background-image: url(./assets/img/decoration__footer-phone.png);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: -1;
+  background: center/contain no-repeat;
+  width: 371px;
+  height: 260px;
+  background-image: url(./assets/img/decoration__footer-light-md.png);
 }
 
 @media (min-width: 1025px) {
   .btn-burger {
     display: none;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .footer-nav {
+    max-width: 650px;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -345,6 +375,52 @@ header .btn-burger {
   .menu_list {
     flex-direction: column;
     gap: 48px;
+  }
+  .btn.btn-outline {
+    width: 52px;
+    height: 52px;
+    border-radius: 18px;
+  }
+  .btn.btn-outline svg {
+    height: 22px;
+  }
+  .btn .footer {
+    padding: 37px 0 7px;
+  }
+  .btn .footer_logo {
+    max-width: 135px;
+  }
+  .btn .footer-nav {
+    order: 1;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 28px;
+    padding: 38px 0 32px;
+  }
+  .btn .footer-row {
+    flex-wrap: wrap;
+    margin-bottom: 0;
+  }
+  .btn .footer-row .btn {
+    margin-left: auto;
+  }
+  .btn .footer .footer-nav__title,
+  .btn .footer .footer-nav__link {
+    font-size: 15px;
+  }
+  .btn .footer .footer-nav__column {
+    padding: 0;
+  }
+  .btn .footer .footer-phones__item {
+    font-size: 16px;
+  }
+  .btn .footer .footer-social__item {
+    height: 34px;
+    width: 34px;
+  }
+  .btn .footer .btn {
+    margin-top: -17px;
   }
 }
 /*# sourceMappingURL=style.css.map */
